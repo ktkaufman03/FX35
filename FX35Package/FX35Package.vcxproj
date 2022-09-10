@@ -165,107 +165,107 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F135Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F135\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F135\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F135Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\Pakon.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\Pakon.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\Pakon.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\Pakon.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\Pakon1.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\Pakon1.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\Pakon1.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\Pakon1.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\pakon2.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\pakon2.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\pakon2.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\pakon2.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F235Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F235\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F235\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F235Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\Pakon5.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\Pakon7.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\Pakon8.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F335Debug|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
-    <FilesToPackage Include="F:\Pakon\CustomDrivers\FX35\FX35Package\F335\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
+    <FilesToPackage Include="$(ProjectDir)F335\PknInit.hex" Condition="'$(Configuration)|$(Platform)'=='F335Release|x64'">
       <PackageRelativeDirectory>
       </PackageRelativeDirectory>
     </FilesToPackage>
