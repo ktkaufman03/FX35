@@ -1,0 +1,63 @@
+//
+// Include the necessary resources
+//
+#include <winver.h>
+#include <ntdef.h>
+
+#ifdef RC_INVOKED
+
+//
+// Set up debug information
+//
+#if DBG
+#define VER_DBG VS_FF_DEBUG
+#else
+#define VER_DBG 0
+#endif
+
+#if defined F135
+#define DEVICENAME "F135"
+#define ORIG_FILENAME "F135USB3.sys"
+#elif defined F235
+#define DEVICENAME "F235"
+#define ORIG_FILENAME "F235USB3.sys"
+#elif defined F335
+#define DEVICENAME "F335"
+#define ORIG_FILENAME "F335USB3.sys"
+#else
+#error "What?!"
+#endif
+
+#define FILEDESC "Pakon " DEVICENAME " Device Driver"
+
+// ------- version info -------------------------------------------------------
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION             3, 0, 0, 0
+PRODUCTVERSION          3, 0, 0, 0
+FILEFLAGSMASK           VS_FFI_FILEFLAGSMASK
+FILEFLAGS               VER_DBG
+FILEOS                  VOS_NT
+FILETYPE                VFT_DRV
+FILESUBTYPE             VFT2_DRV_SYSTEM
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "040904b0"
+BEGIN
+VALUE "CompanyName", "SKM PRODUCTIONS LLC"
+VALUE "FileDescription", FILEDESC
+VALUE "FileVersion", "V3.0.0.0"
+VALUE "InternalName", FILEDESC
+VALUE "LegalCopyright", "(C)2022 SKM PRODUCTIONS LLC"
+VALUE "OriginalFilename", ORIG_FILENAME
+VALUE "ProductName", "SKM x64 FX35 Drivers"
+VALUE "ProductVersion", "V3.0.0.0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0409, 1200
+END
+END
+#endif
