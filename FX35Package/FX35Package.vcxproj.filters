@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="F135\Pakon5.hex" />
+    <None Include="F135\Pakon7.hex" />
+    <None Include="F135\Pakon8.hex" />
+    <None Include="F135\PknInit.hex" />
+    <None Include="F235\PknInit.hex" />
+    <None Include="F235\Pakon.hex" />
+    <None Include="F235\Pakon1.hex" />
+    <None Include="F235\pakon2.hex" />
+    <None Include="F235\Pakon5.hex" />
+    <None Include="F335\Pakon5.hex" />
+    <None Include="F335\Pakon7.hex" />
+    <None Include="F335\Pakon8.hex" />
+    <None Include="F335\PknInit.hex" />
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="F135.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+    <Inf Include="F235.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+    <Inf Include="F335.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+</Project>

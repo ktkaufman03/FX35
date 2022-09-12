@@ -1,0 +1,60 @@
+﻿<mah:MetroWindow x:Class="SkmPakonInstaller.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:SkmPakonInstaller"
+                 Title="SKM Pakon Software Installer"
+                 TitleCharacterCasing="Normal"
+                 Width="800"
+                 Height="450"
+                 ResizeMode="NoResize"
+                 WindowStartupLocation="CenterScreen"
+                 mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="24" TextAlignment="Center">Welcome to the SKM Pakon Software installer</TextBlock>
+        <Separator Grid.Row="1"></Separator>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="10"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="Pakon COM server folder (auto-detected):" FontSize="16" VerticalAlignment="Center"></TextBlock>
+                <TextBox Grid.Column="2" Name="PakonSoftwareFolderTextBox" Text="C:\Program Files (x86)\Pakon\F-X35 COM SERVER" IsReadOnly="True" IsEnabled="False"></TextBox>
+            </Grid>
+            <StackPanel Grid.Row="3">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="10"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <CheckBox Name="AgreementCheck" IsChecked="False"></CheckBox>
+                    <TextBlock Grid.Column="2" TextWrapping="Wrap">I understand that I am installing this software at my own risk, and that SKM Productions, LLC will not be responsible for any issues.</TextBlock>
+                </Grid>
+                <Button Margin="0,10,0,10" IsEnabled="{Binding ElementName=AgreementCheck, Path=IsChecked}" Name="InstallButton" Click="InstallButton_OnClick">Install</Button>
+                <TextBlock TextAlignment="Center" FontStyle="Italic">This installer will modify 3 DLL files in the "F-X35 COM SERVER" component of the Pakon software, and install custom 64-bit compatible drivers.</TextBlock>
+            </StackPanel>
+        </Grid>
+        <TextBlock Grid.Row="3" VerticalAlignment="Center" TextAlignment="Center">
+            <Run>Copyright 2022 SKM Productions, LLC ("SKM.")</Run> 
+            <Run FontWeight="Bold">SKM is not affiliated with Pakon, Inc. or Eastman Kodak Company.</Run>
+        </TextBlock>
+    </Grid>
+</mah:MetroWindow>

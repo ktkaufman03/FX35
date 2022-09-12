@@ -1,0 +1,48 @@
+//
+// Include the necessary resources
+//
+#include <winver.h>
+#include <ntdef.h>
+
+#ifdef RC_INVOKED
+
+//
+// Set up debug information
+//
+#if DBG
+#define VER_DBG VS_FF_DEBUG
+#else
+#define VER_DBG 0
+#endif
+
+// ------- version info -------------------------------------------------------
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION             3, 0, 0, 0
+PRODUCTVERSION          3, 0, 0, 0
+FILEFLAGSMASK           VS_FFI_FILEFLAGSMASK
+FILEFLAGS               VER_DBG
+FILEOS                  VOS_NT
+FILETYPE                VFT_DRV
+FILESUBTYPE             VFT2_DRV_SYSTEM
+BEGIN
+BLOCK "StringFileInfo"
+BEGIN
+BLOCK "040904b0"
+BEGIN
+VALUE "CompanyName", "SKM PRODUCTIONS LLC"
+VALUE "FileDescription", "Pakon FX35 Firmware Loader"
+VALUE "FileVersion", "V3.0.0.0"
+VALUE "InternalName", "Pakon FX35 Firmware Loader"
+VALUE "LegalCopyright", "(C)2022 SKM PRODUCTIONS LLC"
+VALUE "OriginalFilename", "FX35Loader.sys"
+VALUE "ProductName", "SKM x64 FX35 Drivers"
+VALUE "ProductVersion", "V3.0.0.0"
+END
+END
+BLOCK "VarFileInfo"
+BEGIN
+VALUE "Translation", 0x0409, 1200
+END
+END
+#endif

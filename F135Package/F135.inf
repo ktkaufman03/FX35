@@ -1,0 +1,139 @@
+[Version]
+Signature="$Windows NT$"
+Provider=%KN%
+DriverVer=08/10/2022,2.0.0.0
+Class=Image
+ClassGUID={6bdd1fc6-810f-11d0-bec7-08002be2092f}
+CatalogFile=F135USB.cat
+PnpLockdown=1
+;
+; Driver information
+;
+
+[Manufacturer]
+%KN%   = KNMfg,NTAMD64
+
+[KNMfg.NTAMD64]
+; Firmware Loader Driver
+%KN.DeviceDesc0% = WDGTLDR.NT, USB\VID_4705&PID_0211&REV_0000
+%KN.DeviceDesc16% = F135USB.NT, USB\VID_0F05&PID_F135&REV_0002
+; Cypress device shows up when EEPROM isn't loaded
+%KN.DeviceDescCypress% = WDGTLDR.NT, USB\VID_0547&PID_1002
+%KN.DeviceDescCypress% = WDGTLDR.NT, USB\VID_04B4&PID_8613
+%KN.DeviceDescCypress% = WDGTLDR.NT, USB\VID_04B4&PID_8613&REV_0000
+%KN.DeviceDesc15% = WDGTLDR.NT, USB\VID_0F05&PID_F235&REV_AA05
+%KN.DeviceDesc15% = WDGTLDR.NT, USB\VID_0F05&PID_F235&REV_::05
+%KN.DeviceDesc17% = WDGTLDR.NT, USB\VID_0F05&PID_F235&REV_AA07
+%KN.DeviceDesc17% = WDGTLDR.NT, USB\VID_0F05&PID_F235&REV_::07
+%KN.DeviceDesc18% = WDGTLDR.NT, USB\VID_0F05&PID_F235&REV_AA08
+%KN.DeviceDesc18% = WDGTLDR.NT, USB\VID_0F05&PID_F235&REV_::08
+
+;
+; Source file information
+;
+
+[SourceDisksFiles]
+F135USB.sys=1
+F135Loader.sys=1
+PknInit.hex=1
+Pakon5.hex=1
+Pakon7.hex=1
+Pakon8.hex=1
+
+[SourceDisksNames]
+1=%DiskId1%,F235Disk.tag
+
+[DestinationDirs]
+F135USB.CopyFiles.Ext = 10,System32\Drivers
+WDGTLDR.CopyFiles.Ext = 10,System32\Drivers
+WDGTLDR.CopyFiles.Fw  = 10,System32\F235Firmware
+
+[F135USB.NT]
+AddReg=F135USB.AddReg
+CopyFiles=F135USB.CopyFiles.Ext
+
+[F135USB.CopyFiles.Ext]
+F135USB.sys
+
+[F135USB.NT.Services]
+AddService = F135USB, 0x00000002 , F135USB.AddService
+
+[F135USB.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,F135USB.sys
+
+[F135USB.AddService]
+DisplayName    = %ServiceNameF135%
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Base
+ServiceBinary  = %10%\system32\drivers\F135USB.sys
+
+[WDGTLDR.NT]
+AddReg=WDGTLDR.AddReg
+CopyFiles=WDGTLDR.CopyFiles.Ext,WDGTLDR.CopyFiles.Fw
+
+[WDGTLDR.CopyFiles.Ext]
+F135Loader.sys
+
+[WDGTLDR.CopyFiles.Fw]
+PknInit.hex
+Pakon5.hex
+Pakon7.hex
+Pakon8.hex
+
+[WDGTLDR.NT.Services]
+AddService = WDGTLDR, 0x00000002 , WDGTLDR.AddService
+
+[WDGTLDR.AddReg]
+HKR,,DevLoader,,*ntkern
+HKR,,NTMPDriver,,F135Loader.sys
+
+[WDGTLDR.AddServiceReg]
+HKR,,FirmwareDirectory,,\SystemRoot\System32\F235Firmware
+HKR,,F235_AA05,,Pakon5.hex
+HKR,,F235_AA07,,Pakon7.hex
+HKR,,F235_AA08,,Pakon8.hex
+
+[WDGTLDR.AddService]
+DisplayName    = %ServiceName5%
+AddReg         = WDGTLDR.AddServiceReg
+ServiceType    = 1                  ; SERVICE_KERNEL_DRIVER
+StartType      = 3                  ; SERVICE_AUTO_START
+ErrorControl   = 1                  ; SERVICE_ERROR_IGNORE
+LoadOrderGroup = Base
+ServiceBinary  = %10%\system32\drivers\F135Loader.sys
+
+[Strings]
+ServiceNameF235 = "Pakon F235 USB 2.0 Driver - Version 1.2"
+ServiceNameF135 = "Pakon F135 USB 2.0 Driver - Version 1.2"
+ServiceNameFX35 = "Pakon F235/F335 USB 2.0 Driver - Version 1.2"
+ServiceName1 = "Pakon F235 slow USB 2.0 Driver"
+ServiceName2 = "Pakon F235 Firmware Loader Driver"
+ServiceName3 = "Pakon F235 Firmware Loader Driver 2 - Gated Fifo Write Enable"
+ServiceName4 = "Pakon F235 Firmware Loader Driver 3 - Rev B Development Kit"
+ServiceName5 = "Pakon F235 Firmware Loader Driver 4 - Gated Fifo Write Enable, Rev E FX2"
+KN.DeviceDescCypress = "Cypress USB 2.0 FX2 Chip - EEPROM not loaded"
+KN.DeviceDesc0 = "Pakon F235 USB 2.0 Unloaded Device - Version 0"
+KN.DeviceDesc1 = "Pakon F235 USB 2.0 Development Board - Version 1"
+KN.DeviceDesc2 = "Pakon F235 USB 2.0 Development Board - Version 2"
+KN.DeviceDesc3 = "Pakon F235 USB 2.0 Development Board - Version 3"
+KN.DeviceDesc4 = "Pakon F235 USB 2.0 Development Board - Version 4"
+KN.DeviceDesc5 = "Pakon F235 USB 2.0 Development Board - Version 5"
+KN.DeviceDesc6 = "Pakon F235 USB 2.0 Development Board - Version 6"
+KN.DeviceDesc7 = "Pakon F235 USB 2.0 Development Board - Version 7"
+KN.DeviceDesc8 = "Pakon F235 USB 2.0 Scanner - Version 1"
+KN.DeviceDesc9 = "Pakon F235 USB 2.0 Scanner - Version 2"
+KN.DeviceDesc10 = "Pakon F235 USB 2.0 Scanner - Unloaded"
+KN.DeviceDesc11 = "Pakon F235 USB 2.0 Scanner - Unloaded2 - Gated Fifo Write Enable"
+KN.DeviceDesc12 = "Pakon F235 USB 2.0 Scanner - Unloaded3 - Rev B Development Kit"
+KN.DeviceDesc13 = "Pakon F235 USB 2.0 Scanner - Unloaded4 - Gated Fifo Write Enable, Rev E FX2"
+KN.DeviceDesc14 = "Pakon F235 USB 2.0 Scanner - Unloaded5 - not valid"
+KN.DeviceDesc15 = "Pakon F235 USB 2.0 Scanner - Unloaded6 - F235 USB Board Rev B1"
+KN.DeviceDesc16 = "Pakon F135 USB 2.0 Scanner - Version 2"
+KN.DeviceDesc17 = "Pakon F135 USB 2.0 Scanner - F135 Motherboard"
+KN.DeviceDesc18 = "Pakon F235/F335 USB 2.0 Scanner - Version 2"
+KN.DeviceDesc19 = "Pakon F235/F335 USB 2.0 Scanner - Dual Mode USB Board"
+DiskId1 = "Pakon USB Scanners Development Driver Distribution"
+KN = "Pakon"
